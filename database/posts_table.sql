@@ -1,0 +1,1 @@
+SELECT posts.*, COUNT(votes.post_id) as votes_liked FROM posts LEFT JOIN votes ON posts.id = votes.post_id WHERE posts.id = 8 group by posts.id
