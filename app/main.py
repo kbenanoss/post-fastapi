@@ -1,10 +1,7 @@
 from fastapi import FastAPI
-from .database import engine
+from fastapi.middleware.cors import CORSMiddleware
 from .routers import post, user, auth, vote
 from . import models
-from .config import settings
-from fastapi.middleware.cors import CORSMiddleware
-# models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     docs_url="/api/v1/docs",
@@ -37,9 +34,7 @@ app.include_router(auth.router)
 # Votes
 app.include_router(vote.router)
 
-name = "Mawuko"
-
 
 @app.get("/")
 def root():
-    return {"message": "Hello " + name}
+    return {"message": "Hello World"}
