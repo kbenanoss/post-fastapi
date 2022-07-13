@@ -7,7 +7,7 @@ app = FastAPI(
     docs_url="/api/v1/docs",
     redoc_url="/api/v1/redocs",
     title="Post Project Api",
-    description="User can login then view, add, update and delete posts",
+    description="User can login then view, add, update and delete posts. He/She can also vote on any post once",
     # version="1.0",
     openapi_url="/api/v1/openapi.json"
 )
